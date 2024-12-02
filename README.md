@@ -1,6 +1,6 @@
 # peckr
 
-Packet Echo Check & Result reporter - an ICMP ping utility with JSON output.
+an ICMP ping utility with JSON output.
 
 ## Usage
 
