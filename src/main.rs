@@ -63,6 +63,8 @@ struct PingResult {
 struct PingData {
     latency: i64,
     packetloss: f64,
+    packets_sent: u32,
+    packets_received: u32,
 }
 
 #[derive(Clone)]
@@ -180,6 +182,8 @@ fn create_result(config: &Args, stats: &PingStats) -> PingResult {
         data: Some(PingData {
             latency: avg_rtt,
             packetloss: packet_loss,
+            packets_sent: stats.sent,
+            packets_received: stats.received,
         }),
     }
 }
